@@ -1,0 +1,89 @@
+browsersync:
+  notify: true
+  open:   false
+  port:   3000
+  server:
+    basedir: "_site/"
+  xip:    true
+
+clean:
+  # The jekyll build dir
+  - "_site"
+
+copy:
+  # Paths to static assets that aren't (S)CSS or JavaScript
+  # because these are completely handled by the sass and javascript tasks
+  assets:
+    # all files below the assets dir
+    - "assets/**/*"
+    # exclusions:
+    - "!assets/{js,scss,css}/**/*"   # js, scss and css files
+    - "!assets/css{,/**}"            # css dir
+    - "!assets/js{,/**}"             # js dir
+    - "!assets/scss{,/**}"           # scss dir
+    - "!assets/vendor{,/**}"         # vendor dir
+  dist: "_site/assets/"
+  notification: "Running Copy"
+
+javascript:
+  dest:
+    jekyllRoot: "assets/js/"
+    buildDir: "_site/assets/js/"
+  # filename to output
+  filename: "all.js"
+  notification: "Running JavaScript"
+  # Paths to JavaScript libraries, which are combined into one file
+  src:
+    # Libraries requried by Bootstrap
+    # - "node_modules/jquery/dist/jquery.js"
+
+    # Bootstrap dropdowns, popovers and tooltips also depend on Popper.js.
+    - "node_modules/popper.js/dist/umd/popper.js"
+
+    # All Bootstrap’s JavaScript files depend on util.js and it has to be included alongside the other JS files.
+    - "node_modules/bootstrap/js/dist/util.js"
+
+    # Individual Bootstrap components
+    # If you aren't using a component, just remove it from the list
+    - "node_modules/bootstrap/js/dist/alert.js"
+    - "node_modules/bootstrap/js/dist/button.js"
+    - "node_modules/bootstrap/js/dist/carousel.js"
+    - "node_modules/bootstrap/js/dist/collapse.js"
+    - "node_modules/bootstrap/js/dist/dropdown.js"
+    - "node_modules/bootstrap/js/dist/index.js"
+    - "node_modules/bootstrap/js/dist/modal.js"
+    - "node_modules/bootstrap/js/dist/tooltip.js"
+    - "node_modules/bootstrap/js/dist/popover.js"
+    - "node_modules/bootstrap/js/dist/scrollspy.js"
+    - "node_modules/bootstrap/js/dist/tab.js"
+
+    # Paths to your own project code are here
+    # All the files in this list and in the js dir are concatenated into all.js
+    - "!assets/js/all.js"
+    - "assets/js/*.js"
+
+jekyll:
+  notification: "Running jekyll"
+
+sass:
+  # Autoprefixer will make sure your CSS works with these browsers
+  compatibility:
+    - "last 2 versions"
+    - "ie >= 9"
+  dest:
+    jekyllRoot: "assets/css/"
+    buildDir: "_site/assets/css/"
+  notification: "Running Sass"
+  src: "assets/scss/*.scss"
+
+watch:
+  media:
+    - "assets/img/**/*"
+    - "assets/video/**/*"
+  javascript: "assets/js/app.js"
+  sass: "assets/scss/**/*.scss"
+  pages:
+    - "*.{md,html,yml,xml}"
+    - "{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml}"
+    - "!_site/**/*.*"
+    - "!assets/**/*.*"

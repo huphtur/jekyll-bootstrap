@@ -1,0 +1,45 @@
+# Site settings
+language:               ""
+title:                  "Site Title"
+description:            "Site description"
+google-verification:    ""
+
+# Handling Reading
+include:
+  - ".htaccess"
+  - "_pages"
+
+exclude:
+  - ".DS_Store"
+  - "/assets/"
+  - "DOC.md"
+  - "Gemfile*"
+  - "/gulp/"
+  - "gulpfile.js"
+  - "LICENSE.md"
+  - "Makefile"
+  - "node_modules"
+  - "README.md"
+  - "*.json"
+  - "*.lock"
+  - "*.log"
+
+# Plugins
+# Add plugins in the Gemfile
+
+# Conversion
+incremental:      true
+
+# Serving
+# url:            ""
+# baseurl:        "" # does not include hostname
+
+# Outputting
+permalink:          "/news/:title/"
+excerpt_separator:  "<!--more-->"
+paginate_path:      "/news/page:num"
+paginate:           10
+
+compress_html:
+  ignore:
+    envs: [development]
