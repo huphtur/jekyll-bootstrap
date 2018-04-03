@@ -35,10 +35,10 @@ incremental:      true
 # baseurl:        "" # does not include hostname
 
 # Outputting
-permalink:          "/news/:title/"
+permalink:          "/blog/:title/"
 excerpt_separator:  "<!--more-->"
-paginate_path:      "/news/page:num"
-paginate:           10
+paginate_path:      "/blog/page:num"
+paginate:           5
 
 compress_html:
   comments: ["<!-- ", " -->"]
