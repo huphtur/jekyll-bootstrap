@@ -20,9 +20,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "jquery": "^3.3.1",
     "js-yaml": "^3.11.0",
-    "popper.js": "^1.14.1",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
     "yargs": "^11.0.0"

@@ -34,12 +34,6 @@ javascript:
   notification: "Running JavaScript"
   # Paths to JavaScript libraries, which are combined into one file
   src:
-    # Libraries requried by Bootstrap
-    # - "node_modules/jquery/dist/jquery.js"
-
-    # Bootstrap dropdowns, popovers and tooltips also depend on Popper.js.
-    - "node_modules/popper.js/dist/umd/popper.js"
-
     # All Bootstrap’s JavaScript files depend on util.js and it has to be included alongside the other JS files.
     - "node_modules/bootstrap/js/dist/util.js"
 
