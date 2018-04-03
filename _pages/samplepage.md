@@ -5,7 +5,7 @@ title:  Sample page
 date:   2015-01-03 21:21
 ---
 
-This is the {{ page.title }}
+This page showcases a bunch of the assorted JavaScript functionalities used with Bootstrap.
 
 <hr>
 
@@ -41,14 +41,12 @@ This is the {{ page.title }}
 
 <hr>
 
-
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
 
 <hr>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,8 +68,3 @@ This is the {{ page.title }}
     </div>
   </div>
 </div>
-
-
-
-
-Bacon ipsum dolor amet turducken flank boudin filet mignon pork belly kielbasa. Fatback tenderloin cow short ribs beef ribs shankle ribeye pork shank tongue. Ball tip pork belly t-bone frankfurter shoulder shankle pork loin tri-tip jerky salami pork pancetta tongue ham hock picanha. Biltong cow chuck chicken shoulder cupim sirloin, pastrami rump tenderloin corned beef tongue flank leberkas pork chop.
