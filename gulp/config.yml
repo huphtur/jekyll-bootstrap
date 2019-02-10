@@ -34,22 +34,30 @@ javascript:
   notification: "Running JavaScript"
   # Paths to JavaScript libraries, which are combined into one file
   src:
-    # All Bootstrap’s JavaScript files depend on util.js and it has to be included alongside the other JS files.
+    # Bootstrap uses jQuery’s slim build, but the full version is also supported.
+    - node_modules/jquery/dist/jquery.slim.js
+
+    # Dropdowns, tooltips, and popovers require Popper.js
+    # NOTE: load from /umd/ dir
+    - node_modules/popper.js/dist/umd/popper.min.js
+            
+    # All Bootstrap’s JavaScript files depend on util.js and it has to be included alongside the other JS files and needs to be loaded FIRST!
     - "node_modules/bootstrap/js/dist/util.js"
 
     # Individual Bootstrap components
     # If you aren't using a component, just remove it from the list
+    # NOTE: make sure popover is loaded LAST!!! 
     - "node_modules/bootstrap/js/dist/alert.js"
     - "node_modules/bootstrap/js/dist/button.js"
     - "node_modules/bootstrap/js/dist/carousel.js"
     - "node_modules/bootstrap/js/dist/collapse.js"
     - "node_modules/bootstrap/js/dist/dropdown.js"
-    - "node_modules/bootstrap/js/dist/index.js"
     - "node_modules/bootstrap/js/dist/modal.js"
-    - "node_modules/bootstrap/js/dist/tooltip.js"
-    - "node_modules/bootstrap/js/dist/popover.js"
     - "node_modules/bootstrap/js/dist/scrollspy.js"
     - "node_modules/bootstrap/js/dist/tab.js"
+    - "node_modules/bootstrap/js/dist/toast.js"
+    - "node_modules/bootstrap/js/dist/tooltip.js"
+    - "node_modules/bootstrap/js/dist/popover.js"
 
     # Paths to your own project code are here
     # All the files in this list and in the js dir are concatenated into all.js
@@ -78,6 +86,6 @@ watch:
   sass: "assets/scss/**/*.scss"
   pages:
     - "*.{md,html,yml,xml}"
-    - "{_data,_includes,_layouts,_pages,_posts,blog}/**/*.{md,html,yml,xml}"
+    - "{_data,_includes,_layouts,_pages,_posts,blog}/**/*.{md,html,yml,xml,csv}"
     - "!_site/**/*.*"
     - "!assets/**/*.*"

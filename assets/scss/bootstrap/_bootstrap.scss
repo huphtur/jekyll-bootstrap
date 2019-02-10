@@ -1,24 +1,24 @@
-/*!
- * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 // Boostrap Settings
 // --------------------------------------------------
 // Import the settings file where we set variables that
 // override Boostrap's default styles
 @import 'settings';
 
+/*!
+ * Bootstrap v4.2.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ 
 // Required
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
 // Optional
+// If you aren't using a component, just remove it from the list
 @import "node_modules/bootstrap/scss/root";
-@import "node_modules/bootstrap/scss/print";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
@@ -44,8 +44,11 @@
 @import "node_modules/bootstrap/scss/media";
 @import "node_modules/bootstrap/scss/list-group";
 @import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/toasts";
 @import "node_modules/bootstrap/scss/modal";
 @import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/popover";
 @import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/spinners";
 @import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/print";

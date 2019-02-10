@@ -28,19 +28,19 @@ exclude:
 # Add plugins in the Gemfile
 
 # Conversion
-incremental:      true
+incremental:       true
 
 # Serving
-# url:            ""
-# baseurl:        "" # does not include hostname
+# url:             ""
+# baseurl:         "" # does not include hostname
 
 # Outputting
-permalink:          "/blog/:title/"
-excerpt_separator:  "<!--more-->"
-paginate_path:      "/blog/page:num"
-paginate:           5
+permalink:         "/blog/:title/"
+excerpt_separator: "<!--more-->"
+paginate_path:     "/blog/page:num"
+paginate:          5
 
 compress_html:
-  comments: ["<!-- ", " -->"]
+  comments:        ["<!-- ", " -->"]
   ignore:
-    envs: [development]
+    envs:          [development]
